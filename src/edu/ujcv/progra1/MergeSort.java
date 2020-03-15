@@ -4,20 +4,28 @@ public class MergeSort  implements SortTester{
     @Override
     public long sort(int[] array) {
         long start = System.currentTimeMillis();
-        mergeSort(array);
+        MergeSort(array);
 
         long end = System.currentTimeMillis();
 
         return end - start;
     }
 
-    public static int[] mergeSort(int[] a){
-        return new int[5];
+    private void MergeSort(int[] array) {
     }
+    public static void merge(int a[],int inf, int d, int sup){
+        int i, j, k;
+        int [] b = new int[a.length];
+        for (i = inf; i <= sup; i++)
+            b[i] = a[i];
 
-    public static int[] merge(int[] inf, int[] sup ){
-        return new int[5];
+        i=  inf; j = d + 1; k = inf;
+        while (i <= d && j <= sup)
+            if (b[i] <= b[j])
+                a[k++] = b[i++];
+            else
+                a[k++] = b[j++];
+        while (i <= d)
+            a[k++] = b[i++];
     }
-
-
 }
