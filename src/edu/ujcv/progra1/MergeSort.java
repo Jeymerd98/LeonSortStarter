@@ -11,7 +11,8 @@ public class MergeSort  implements SortTester{
         return end - start;
     }
 
-    private void MergeSort(int[] array) {
+    public int[] MergeSort(int[] array) {
+        return array;
     }
     public static void merge(int a[],int inf, int d, int sup){
         int i, j, k;
