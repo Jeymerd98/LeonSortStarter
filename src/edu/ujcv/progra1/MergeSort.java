@@ -1,12 +1,15 @@
 package edu.ujcv.progra1;
 
 public class MergeSort  implements SortTester{
+    public MergeSort(int[] elementos) {
+    }
+
     @Override
     public long sort(int[] array) {
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
         MergeSort(array);
 
-        long end = System.currentTimeMillis();
+        long end = System.nanoTime();
 
         return end - start;
     }

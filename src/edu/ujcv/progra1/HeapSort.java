@@ -5,10 +5,10 @@ import java.util.concurrent.PriorityBlockingQueue;
 public class HeapSort implements SortTester {
     @Override
     public long sort(int[] array) {
-        long start = System.currentTimeMillis();
+        long start = System.nanoTime();
         new heapSort(array);
 
-        long end = System.currentTimeMillis();
+        long end = System.nanoTime();
 
         return end - start;
     }
@@ -30,8 +30,7 @@ public class HeapSort implements SortTester {
             pbq.add(4);
             pbq.add(5);
 
-            System.out.println("PriorityBlockingQueue:"
-                    + pbq);
+            System.out.println("PriorityBlockingQueue:" + pbq);
             return array;
         }
     }
