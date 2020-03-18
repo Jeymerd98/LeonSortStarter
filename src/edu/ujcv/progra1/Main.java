@@ -7,7 +7,7 @@ public class Main {
 
         int[] elementos = {3,2,4,5,6,7,9,10,3,5};
         HeapSort h = new HeapSort();
-        elementos = h.HeapSort(elementos);
+        elementos = h.heapSort(elementos);
 
         for (int i = 0; i < elementos.length; i++) {
             System.out.println(elementos[i]);

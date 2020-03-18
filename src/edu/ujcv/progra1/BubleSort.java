@@ -4,6 +4,10 @@ public class BubleSort implements SortTester {
     public BubleSort(int[] elementos) {
     }
 
+    public BubleSort() {
+
+    }
+
     @Override
     public long sort(int[] array) {
         long start = System.nanoTime();
