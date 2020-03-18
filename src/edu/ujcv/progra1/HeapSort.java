@@ -1,5 +1,8 @@
 package edu.ujcv.progra1;
 
+import com.sun.org.apache.bcel.internal.generic.SWAP;
+
+import java.util.ArrayList;
 import java.util.concurrent.PriorityBlockingQueue;
 
 public class HeapSort implements SortTester {
@@ -14,18 +17,27 @@ public class HeapSort implements SortTester {
 
         return end - start;
     }
+    private ArrayList<Integer>datos;
 
-        public  int[] HeapSort(int[] array) {
-
-            PriorityBlockingQueue<Integer> pbq = new PriorityBlockingQueue<Integer>();
-
-            pbq.add(1);
-            pbq.add(2);
-            pbq.add(5);
-            pbq.add(3);
-            pbq.add(4);
-
-            System.out.println("PriorityBlockingQueue:" + pbq);
-            return array;
+    private int padre(int i){
+        return (i-1)/2;
+    }
+    private int hijoIz(int i){
+        return i*2+2;
+    }
+    private int hijoDer(int i){
+        return i*2+2;
+    }
+    public void flotar(int i){
+        if (i <= 0)return;
+        if (datos.get(i) <= datos.get(padre(i))){
+            SWAP(i,padre(i));
+            flotar(padre(i));
         }
+    }
+    private void SWAP(int j, int k){
+        Integer temp = datos.get(j);
+        datos.get(j, datos.get(k));
+        datos.set(k, temp);
+    }
     }
