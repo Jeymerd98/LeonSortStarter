@@ -25,30 +25,30 @@ public class CycleSort  implements SortTester {
             if (pos == a) {
                 continue;
             }
-            //while (buscador == input[pos]) {
-                //pos++;
-            //}
-           // buscador = set(input, buscador, pos);
+            while (buscador == input[pos]) {
+                pos++;
+            }
+            buscador = set(input, buscador, pos);
 
-          //  while (pos != a) {
-                //pos = a;
-               // for (int i = a + 1; i < input.length; i++) {
-                 //   if (input[i] < buscador) {
-                   //     pos++;
-                    //}
-                //}
-                //while (buscador == input[pos]) {
-                  //  pos++;
-                //}
-                //buscador = set(input, buscador, pos);
-            //}
-        //}
-    //}
-    //private static int set(int[] array, int data, int index) {
-       // try {
-         //   return array[index];
-        //} finally {
-          //  array[index] = data;
+            while (pos != a) {
+                pos = a;
+                for (int i = a + 1; i < input.length; i++) {
+                    if (input[i] < buscador) {
+                        pos++;
+                    }
+                }
+                while (buscador == input[pos]) {
+                    pos++;
+                }
+                buscador = set(input, buscador, pos);
+            }
+        }
+    }
+    private static int set(int[] array, int data, int index) {
+        try {
+            return array[index];
+        } finally {
+            array[index] = data;
         }
     }
 }
