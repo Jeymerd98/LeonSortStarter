@@ -11,8 +11,48 @@ public class CycleSort  implements SortTester {
 
         return end - start;
     }
+    public static void cycleSort(int[] input) {
 
-        static int[] cycleSort(int[] a) {
+        for (int a = 0, buscador, pos; a < input.length - 1; a++) {
+
+            buscador = input[a];
+            pos = a;
+            for (int i = a + 1; i < input.length; i++) {
+                if (input[i] < buscador) {
+                    pos++;
+                }
+            }
+            if (pos == a) {
+                continue;
+            }
+            //while (buscador == input[pos]) {
+                //pos++;
+            //}
+           // buscador = set(input, buscador, pos);
+
+          //  while (pos != a) {
+                //pos = a;
+               // for (int i = a + 1; i < input.length; i++) {
+                 //   if (input[i] < buscador) {
+                   //     pos++;
+                    //}
+                //}
+                //while (buscador == input[pos]) {
+                  //  pos++;
+                //}
+                //buscador = set(input, buscador, pos);
+            //}
+        //}
+    //}
+    //private static int set(int[] array, int data, int index) {
+       // try {
+         //   return array[index];
+        //} finally {
+          //  array[index] = data;
+        }
+    }
+}
+        /*static int[] cycleSort(int[] a) {
             int writes = 0;
 
             for (int cycleStart = 0; cycleStart < a.length - 1; cycleStart++) {
@@ -50,4 +90,5 @@ public class CycleSort  implements SortTester {
                 }
             }
             return new int[]{writes};
-        }}
+        }
+         */
