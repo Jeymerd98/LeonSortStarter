@@ -4,9 +4,12 @@ public class MergeSort  implements SortTester{
     public MergeSort(int[] elementos) {
     }
 
+    public MergeSort() {
+    }
+
     @Override
     public long sort(int[] array) {
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         MergeSort(array);
 
         long end = System.nanoTime();

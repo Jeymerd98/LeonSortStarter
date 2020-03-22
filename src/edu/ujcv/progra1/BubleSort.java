@@ -5,11 +5,10 @@ public class BubleSort implements SortTester {
     }
 
     public BubleSort() {
-
     }
     @Override
     public long sort(int[] array) {
-        long start = System.nanoTime();
+        long start = System.currentTimeMillis();
         BubleSort(array);
 
         long end = System.nanoTime();
